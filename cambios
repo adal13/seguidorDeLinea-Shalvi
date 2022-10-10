@@ -1,0 +1,67 @@
+ if ( (s1 > 800 || s2 > 800 || s3 > 800) && (s5<500) ) 
+    {
+      Serial.println("GIRAR ALA Izquierda");   
+      digitalWrite(mi1,HIGH);
+      digitalWrite(mi2,LOW);
+      analogWrite(pwmi, 100);
+      
+      digitalWrite(md1,HIGH);
+      digitalWrite(md2,LOW);
+      analogWrite(pwmd,255);
+        
+        if(s1 > 700)
+        {
+        Serial.println("GIRAR ALA Izquierda con todo");   
+        digitalWrite(mi1,HIGH);
+        digitalWrite(mi2,LOW);
+        analogWrite(pwmi, 50);
+        
+        digitalWrite(md1,HIGH);
+        digitalWrite(md2,LOW);
+        analogWrite(pwmd,255);
+        }
+    }
+    
+
+   
+    if( (s8 > 800 || s7> 800 || s6 > 800) && (s4<500) )
+    {
+      Serial.println("GIRAR A LA DeRECHA");
+      digitalWrite(4, LOW);
+
+      digitalWrite(mi1,HIGH);
+      digitalWrite(mi2,LOW);
+      analogWrite(pwmi, 200);
+
+      digitalWrite(md1,HIGH);
+      digitalWrite(md2,LOW);
+      analogWrite(pwmd,100);
+    
+        if(s8 > 800)
+        {
+        Serial.println("GIRAR A LA Derecha CON TODO");
+        digitalWrite(4, LOW);
+
+        digitalWrite(mi1,HIGH);
+        digitalWrite(mi2,LOW);
+        analogWrite(pwmi, 200);
+
+        digitalWrite(md1,HIGH);
+        digitalWrite(md2,LOW);
+        analogWrite(pwmd,50);
+        }
+    }
+
+    if(s4 > 800 && s5 > 800)
+    {
+      Serial.println("Avanzar");
+      digitalWrite(4, LOW);
+
+      digitalWrite(mi1,HIGH);
+      digitalWrite(mi2,LOW);
+      analogWrite(pwmi, 255);
+
+      digitalWrite(md1,HIGH);
+      digitalWrite(md2,LOW);
+      analogWrite(pwmd, 255);    
+    }
